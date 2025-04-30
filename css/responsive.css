@@ -1,0 +1,1107 @@
+/* responsive.css - Peningkatan Responsive untuk Animals.id */
+
+/* =================== RESPONSIVE STYLES =================== */
+
+/* Large screens (1200px and up) */
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+        padding: 0 15px;
+    }
+    
+    .hero-text h1 {
+        font-size: 3.25rem; /* 52px - lebih besar */
+    }
+    
+    .hero {
+        padding: 200px 0 140px; /* Padding lebih besar */
+    }
+    
+    /* Tambahan untuk layar besar */
+    .services-grid {
+        gap: 35px;
+    }
+    
+    .products-grid {
+        gap: 35px;
+    }
+    
+    .tips-grid {
+        gap: 35px;
+    }
+}
+
+/* Medium screens (992px to 1199px) */
+@media screen and (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+    
+    html {
+        font-size: 95%; /* Mengurangi ukuran font dasar */
+    }
+    
+    h1 {
+        font-size: 2.375rem; /* 38px */
+    }
+    
+    h2 {
+        font-size: 2rem; /* 32px */
+    }
+    
+    .hero-content {
+        padding: 0 20px;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.75rem; /* 44px */
+    }
+    
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px;
+    }
+    
+    .doctor-card {
+        flex: 0 0 calc(33.33% - 20px);
+    }
+    
+    .tips-grid {
+        gap: 25px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 2fr 1fr 1fr 1.2fr;
+        gap: 30px;
+    }
+    
+    .footer-column:last-child {
+        grid-column: span 4;
+        margin-top: 30px;
+    }
+    
+    .step-icon {
+        width: 90px;
+        height: 90px;
+        font-size: 2rem; /* 32px */
+    }
+    
+    .slider-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-float {
+        width: 60px;
+        height: 60px;
+        font-size: 1.75rem; /* 28px */
+    }
+    
+    .back-to-top-btn {
+        width: 50px;
+        height: 50px;
+    }
+    
+    /* Mengurangi margin dan padding untuk menyesuaikan layar */
+    section {
+        padding: 90px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 50px;
+    }
+}
+
+/* Tablet (768px to 991px) */
+@media screen and (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+    
+    html {
+        font-size: 90%; /* Mengurangi ukuran font dasar lagi */
+    }
+    
+    h1 {
+        font-size: 2.125rem; /* 34px */
+    }
+    
+    h2 {
+        font-size: 1.75rem; /* 28px */
+    }
+    
+    /* Peningkatan header mobile friendly */
+    .header-content {
+        height: 70px;
+    }
+    
+    .logo-img {
+        height: 35px;
+    }
+    
+    .logo-text {
+        font-size: 1.375rem; /* 22px */
+    }
+    
+    .header-buttons .btn {
+        font-size: 0.875rem; /* 14px */
+        padding: 8px 15px;
+        min-height: 40px;
+    }
+    
+    /* Menu nav yang ditingkatkan */
+    .main-nav {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh; /* Full-height */
+        background-color: white;
+        box-shadow: 0 5px 15px var(--shadow-color);
+        padding: 80px 0 40px; /* Padding atas lebih besar untuk menyesuaikan header */
+        z-index: 999;
+        overflow-y: auto;
+    }
+    
+    .main-nav.active {
+        display: block;
+        animation: slideIn 0.3s ease forwards;
+    }
+    
+    @keyframes slideIn {
+        from {
+            opacity: 0;
+            transform: translateX(-20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    .nav-links {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .nav-links li {
+        margin: 10px 0;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .nav-links a {
+        padding: 15px;
+        margin: 5px 0;
+        display: block;
+        font-size: 1.125rem; /* 18px */
+        border-radius: var(--radius-md);
+        transition: all var(--transition-fast);
+    }
+    
+    .nav-links a:hover,
+    .nav-links a.active {
+        background-color: var(--primary-very-light);
+        color: var(--primary-color);
+    }
+    
+    .nav-links a::after {
+        display: none;
+    }
+    
+    /* Menu toggle yang lebih baik */
+    .mobile-menu-toggle {
+        display: flex;
+        z-index: 1001;
+    }
+    
+    .mobile-menu-toggle.active .bar:nth-child(1) {
+        transform: translateY(9px) rotate(45deg);
+        background-color: var(--primary-color);
+    }
+    
+    .mobile-menu-toggle.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+    
+    .mobile-menu-toggle.active .bar:nth-child(3) {
+        transform: translateY(-9px) rotate(-45deg);
+        background-color: var(--primary-color);
+    }
+    
+    /* Hero section yang dioptimalkan */
+    .hero {
+        padding: 140px 0 80px;
+    }
+    
+    .hero-content {
+        flex-direction: column;
+    }
+    
+    .hero-text {
+        margin-right: 0;
+        margin-bottom: 50px;
+        text-align: center;
+        max-width: 100%;
+    }
+    
+    .hero-text h1 {
+        font-size: 2.25rem; /* 36px */
+    }
+    
+    .hero-buttons {
+        justify-content: center;
+    }
+    
+    .hero-stats {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+    
+    .stat-item {
+        flex: 0 0 calc(50% - 10px);
+        margin-right: 0;
+    }
+    
+    /* Layout dan grids */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .steps {
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .step-connector {
+        display: none;
+    }
+    
+    .step {
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    
+    /* Sliders yang dioptimalkan */
+    .doctors-slider {
+        overflow-x: auto;
+        padding-bottom: 30px;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
+    
+    .testimonial-card {
+        flex: 0 0 calc(50% - 15px);
+        scroll-snap-align: start;
+    }
+    
+    /* Scroll indicator untuk slider */
+    .slider-scroll-indicator {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 20px;
+    }
+    
+    .scroll-dot {
+        width: 10px;
+        height: 10px;
+        background-color: var(--primary-very-light);
+        border-radius: 50%;
+        transition: all var(--transition-fast);
+    }
+    
+    .scroll-dot.active {
+        background-color: var(--primary-color);
+        transform: scale(1.2);
+    }
+    
+    /* Contact dan About sections */
+    .contact-content {
+        flex-direction: column;
+    }
+    
+    .contact-whatsapp {
+        width: 100%;
+    }
+    
+    .whatsapp-card {
+        margin-top: 40px;
+    }
+    
+    .about-content {
+        flex-direction: column;
+    }
+    
+    .about-image {
+        margin-bottom: 50px;
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    .about-text {
+        text-align: center;
+    }
+    
+    .about-text h2:after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .value-item {
+        max-width: 500px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+    /* Footer yang dioptimalkan */
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+    
+    .footer-column:first-child {
+        grid-column: span 2;
+    }
+    
+    .footer-bottom {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    
+    .payment-methods {
+        order: -1;
+    }
+    
+    /* Floating buttons yang disesuaikan */
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+        font-size: 1.5rem; /* 24px */
+        right: 20px;
+        bottom: 20px;
+    }
+    
+    .back-to-top-btn {
+        width: 45px;
+        height: 45px;
+        font-size: 1.125rem; /* 18px */
+        right: 20px;
+        bottom: 90px;
+    }
+    
+    /* Reduce section padding */
+    section {
+        padding: 70px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 40px;
+    }
+    
+    /* Perbaikan tambahan untuk tablet */
+    .btn {
+        padding: 10px 20px;
+        font-size: 0.9375rem; /* 15px */
+    }
+    
+    .btn-lg {
+        padding: 12px 25px;
+        font-size: 1rem; /* 16px */
+    }
+    
+    .service-card,
+    .doctor-card,
+    .tip-card,
+    .product-card,
+    .testimonial-card {
+        transform: none !important;
+        box-shadow: 0 10px 25px var(--shadow-color);
+    }
+    
+    .service-card:hover,
+    .doctor-card:hover,
+    .tip-card:hover,
+    .product-card:hover,
+    .testimonial-card:hover {
+        transform: translateY(-10px) !important;
+    }
+}
+
+/* Mobile (576px to 767px) */
+@media screen and (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+    
+    html {
+        font-size: 85%; /* Font size lebih kecil lagi */
+    }
+    
+    h1 {
+        font-size: 1.875rem; /* 30px */
+    }
+    
+    h2 {
+        font-size: 1.625rem; /* 26px */
+    }
+    
+    h3 {
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    /* Spacing yang dikurangi */
+    section {
+        padding: 50px 0;
+    }
+    
+    .section-header {
+        margin-bottom: 30px;
+    }
+    
+    .section-header p {
+        font-size: 0.9375rem; /* 15px */
+    }
+    
+    /* Header yang dikompakkan */
+    .header-content {
+        height: 60px;
+    }
+    
+    .logo-img {
+        height: 28px;
+    }
+    
+    .logo-text {
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    .header-buttons .btn {
+        display: none; /* Hide header buttons on mobile */
+    }
+    
+    /* Login/register buttons khusus mobile */
+    .mobile-header-buttons {
+        display: flex;
+        margin-top: 20px;
+        justify-content: center;
+        gap: 10px;
+    }
+    
+    .mobile-header-buttons .btn {
+        flex: 1;
+        max-width: 150px;
+    }
+    
+    /* Hero section yang dioptimalkan */
+    .hero {
+        padding: 100px 0 50px;
+        text-align: center;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.875rem; /* 30px */
+        margin-bottom: 15px;
+    }
+    
+    .hero-text p {
+        font-size: 1rem; /* 16px */
+        margin-bottom: 25px;
+    }
+    
+    .hero-buttons {
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+    
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 250px;
+        margin-right: 0;
+    }
+    
+    .hero-stats {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 30px;
+    }
+    
+    .stat-item {
+        flex: 0 0 calc(50% - 10px);
+        margin-right: 0;
+        padding: 12px;
+    }
+    
+    .stat-number {
+        font-size: 1.5rem; /* 24px */
+    }
+    
+    .stat-label {
+        font-size: 0.75rem; /* 12px */
+    }
+    
+    /* Grid layouts yang dioptimalkan */
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .service-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    /* Slider yang dioptimalkan untuk mobile */
+    .doctor-card {
+        flex: 0 0 85%;
+    }
+    
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .tip-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .category-tabs {
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-bottom: 30px;
+    }
+    
+    .tab-btn {
+        padding: 8px 16px;
+        font-size: 0.875rem; /* 14px */
+        min-height: 40px;
+        min-width: auto;
+        flex: 1;
+        max-width: calc(50% - 5px);
+    }
+    
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .product-card {
+        max-width: 350px;
+        margin: 0 auto;
+    }
+    
+    .testimonial-card {
+        flex: 0 0 90%;
+        padding: 25px 20px;
+    }
+    
+    /* Contact dan About sections yang dioptimalkan */
+    .contact-method {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    
+    .contact-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    .contact-detail h3 {
+        font-size: 1.125rem; /* 18px */
+    }
+    
+    .social-links {
+        justify-content: center;
+    }
+    
+    .whatsapp-card {
+        padding: 30px 20px;
+    }
+    
+    .btn-whatsapp-contact {
+        width: 100%;
+        padding: 12px 20px;
+    }
+    
+    .value-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px 15px;
+    }
+    
+    .value-icon {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+    
+    /* Footer yang dioptimalkan */
+    .footer {
+        padding: 70px 0 30px;
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        text-align: center;
+    }
+    
+    .footer-column:first-child {
+        grid-column: span 1;
+    }
+    
+    .social-media {
+        justify-content: center;
+    }
+    
+    .footer-title::after {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    
+    .footer-links a {
+        padding: 5px 0;
+    }
+    
+    .footer-links a::before {
+        display: none;
+    }
+    
+    .contact-info li {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .contact-info i {
+        margin-right: 0;
+        margin-bottom: 8px;
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    /* Floating buttons yang dioptimalkan */
+    .whatsapp-float {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    .back-to-top-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem; /* 16px */
+    }
+    
+    /* Tambahan untuk mobile */
+    .btn {
+        min-height: 44px; /* Minimal touch target */
+    }
+}
+
+/* Small Mobile (up to 575px) */
+@media screen and (max-width: 575px) {
+    .container {
+        padding: 0 15px;
+    }
+    
+    html {
+        font-size: 80%; /* Font size lebih kecil lagi */
+    }
+    
+    h1 {
+        font-size: 1.625rem; /* 26px */
+    }
+    
+    h2 {
+        font-size: 1.375rem; /* 22px */
+    }
+    
+    .section-header p {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    /* Hero section yang sangat kompak */
+    .hero {
+        padding: 90px 0 40px;
+    }
+    
+    .hero-text h1 {
+        font-size: 1.625rem; /* 26px */
+    }
+    
+    .hero-text p {
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    /* Stats dalam satu kolom */
+    .stat-item {
+        flex: 0 0 100%;
+        max-width: 180px;
+    }
+    
+    /* Sliders yang sangat kompak */
+    .doctor-card {
+        flex: 0 0 95%;
+    }
+    
+    .step {
+        padding: 0 10px;
+    }
+    
+    .step-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 1.75rem; /* 28px */
+    }
+    
+    .step-number {
+        width: 35px;
+        height: 35px;
+        font-size: 1rem; /* 16px */
+    }
+    
+    /* Image sizes dioptimalkan */
+    .hero-img {
+        max-height: 250px;
+        object-fit: cover;
+    }
+    
+    .testimonial-card {
+        flex: 0 0 100%;
+        padding: 20px 15px;
+    }
+    
+    .testimonial-quote {
+        font-size: 1.5rem; /* 24px */
+        top: 15px;
+        left: 15px;
+    }
+    
+    .testimonial-text {
+        margin: 30px 0 20px;
+        font-size: 0.875rem; /* 14px */
+    }
+    
+    .author-img {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .whatsapp-card {
+        padding: 25px 15px;
+    }
+    
+    .whatsapp-header i {
+        font-size: 1.75rem; /* 28px */
+    }
+    
+    .whatsapp-header h3 {
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    /* Menghilangkan elemen dekoratif untuk performa */
+    .about-image::before,
+    .service-card::before,
+    .step-icon::after {
+        display: none;
+    }
+    
+    .value-item {
+        padding: 15px 10px;
+    }
+    
+    .value-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.25rem; /* 20px */
+    }
+    
+    .cta-contact .btn {
+        padding: 10px 20px;
+        font-size: 0.875rem; /* 14px */
+        width: 100%;
+        max-width: 250px;
+    }
+    
+    /* Tab buttons yang lebih optimized */
+    .tab-btn {
+        font-size: 0.75rem; /* 12px */
+        padding: 8px 12px;
+    }
+    
+    /* Button styles yang disederhanakan */
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .hero-buttons .btn,
+    .cta-contact .btn {
+        width: 100%;
+    }
+}
+
+/* Landscape fixes for mobile */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+    .hero {
+        padding: 80px 0 40px;
+    }
+    
+    .hero-content {
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    .hero-text {
+        margin-bottom: 0;
+        margin-right: 20px;
+        text-align: left;
+    }
+    
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: flex-start;
+    }
+    
+    .hero-buttons .btn {
+        margin-right: 10px;
+        max-width: 150px;
+    }
+    
+    .hero-stats {
+        justify-content: flex-start;
+    }
+    
+    .main-nav {
+        padding-top: 70px;
+    }
+    
+    .nav-links {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 10px;
+    }
+}
+
+/* Fix animations on mobile for performance */
+@media (prefers-reduced-motion: reduce), (max-width: 767px) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+    
+    .animated,
+    .service-card, 
+    .step, 
+    .doctor-card, 
+    .tip-card, 
+    .product-card, 
+    .testimonial-card,
+    .contact-method,
+    .value-item {
+        animation: none !important;
+        opacity: 1 !important;
+        transform: none !important;
+    }
+    
+    .service-card:hover,
+    .doctor-card:hover,
+    .tip-card:hover,
+    .product-card:hover,
+    .testimonial-card:hover {
+        transform: translateY(-5px) !important;
+        transition: transform 0.3s ease !important;
+    }
+    
+    .hero {
+        background: var(--primary-color) !important;
+        animation: none !important;
+    }
+}
+
+/* Touch device optimizations */
+@media (hover: none) {
+    .nav-links a:hover::after {
+        width: 0;
+    }
+    
+    .nav-links a.active::after {
+        width: 100%;
+    }
+    
+    /* Provide clear touch feedback */
+    .touch-feedback {
+        position: relative;
+        overflow: hidden;
+    }
+    
+    .touch-feedback::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: rgba(255, 255, 255, 0.2);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+    }
+    
+    .touch-feedback:active::after {
+        opacity: 1;
+    }
+}
+
+/* Safari fixes */
+@supports (-webkit-touch-callout: none) {
+    /* Fixes for iOS Safari */
+    .btn, 
+    input[type="submit"], 
+    input[type="button"] {
+        -webkit-appearance: none;
+        appearance: none;
+    }
+    
+    /* Fix for 100vh issue on iOS */
+    .main-nav {
+        height: 100%;
+        height: -webkit-fill-available;
+    }
+    
+    /* Fix for position: fixed on iOS */
+    .whatsapp-float,
+    .back-to-top-btn {
+        transform: translateZ(0);
+    }
+    
+    /* Fix for border-radius on iOS */
+    .service-card,
+    .doctor-card,
+    .tip-card,
+    .product-card,
+    .testimonial-card {
+        -webkit-mask-image: -webkit-radial-gradient(white, black);
+    }
+}
+
+/* Larger buttons for all touch devices */
+@media (hover: none) and (pointer: coarse) {
+    .btn {
+        min-height: 44px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+    }
+    
+    .tab-btn {
+        min-height: 44px;
+    }
+    
+    .category-tabs {
+        gap: 12px;
+    }
+    
+    .slider-btn {
+        width: 48px;
+        height: 48px;
+    }
+    
+    .back-to-top-btn,
+    .whatsapp-float {
+        width: 55px;
+        height: 55px;
+    }
+    
+    .nav-links a {
+        padding: 12px 15px;
+    }
+}
+
+/* Print styles */
+@media print {
+    body {
+        background: white;
+        color: black;
+    }
+    
+    .header,
+    .footer,
+    .back-to-top-btn,
+    .whatsapp-float,
+    .mobile-menu-toggle {
+        display: none;
+    }
+    
+    section {
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+    }
+    
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+    
+    .container {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        page-break-after: avoid;
+        page-break-inside: avoid;
+        color: black;
+    }
+    
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid;
+    }
+    
+    p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+    }
+    
+    h2::after {
+        display: none;
+    }
+}
+
+    
+    .doctor-card {
+        flex: 0 0 calc(50% - 15px);
+        scroll-snap-align: start;
+    }
+    
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 25px;
+    }
+    
+    .testimonials-slider {
+        overflow-x: auto;
+        padding-bottom: 30px;
+        -webkit-overflow-scrolling: touch;
+        scroll-snap-type: x mandatory;
+    }
